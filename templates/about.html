@@ -1,0 +1,394 @@
+
+<!DOCTYPE html>
+<html lang="en"class="home-html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bsafe-About</title>
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/bank-icon/blue-bank-icon-in-flat-style-with-the-building-facade-with-three--26.png">
+   
+  <link rel="stylesheet" href="/static/css/about.css">
+  
+    <script src="https://kit.fontawesome.com/5b61822651.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+ <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+ <link  href="{{ url_for('static', filename='css/script.js') }}">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+ <script>
+  jQuery(document).ready(function(){
+    jQuery(function() {
+          jQuery(this).bind("contextmenu", function(event) {
+              event.preventDefault();
+              alert('Right click disable in this site!!')
+          });
+      });
+  })
+ </script>
+
+
+
+
+ <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+ <!-- <script src="firebase.js"></script> -->
+
+
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\logout\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<script>
+
+
+
+
+
+</script>
+
+<!-- //////////////////////////////////////////////firebase////////////////////////////////////////////// -->
+<script>
+ var firebaseConfig ={
+     apiKey: "AIzaSyBPC3eojJtW60Jj47wAp2gAlCdyLO76Hhk",
+   authDomain: "credit-235dd.firebaseapp.com",
+   projectId: "credit-235dd",
+   storageBucket: "credit-235dd.appspot.com",
+   messagingSenderId: "1068587415705",
+   appId: "1:1068587415705:web:1140d97921ad2f742c6008",
+   measurementId: "G-XQWWVH1R7Z"
+ }
+ 
+ // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  const auth = firebase.auth();
+
+
+  function signOut(){
+ 
+   auth.signOut();
+   location.replace("/")
+   
+ }
+ 
+ 
+ 
+ auth.onAuthStateChanged(function(user){
+   
+   if(user){
+     
+     var email = user.email;
+    
+     
+     //Take user to a different or home page
+
+     //is signed in
+     
+   }else{
+     
+
+     //no user is signed in
+   }
+   
+   
+   
+ });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(48, 37, 82) ;">
+    <a class="navbar-brand" href="#">Bsafe</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link active" href="/about">About</a>
+        <a class="nav-item nav-link" href="/contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="collapse navbar-collapse glow" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <button type="button" class="btn btn-outline-warning logout" onclick="signOut()">Log Out</button></a>
+      
+      </div>
+    </div>
+  </nav>
+
+  
+<style>
+  .glow{
+    flex-grow: unset;
+  }
+</style>
+
+
+<div class="company">
+    <!-- <div class="img">
+     
+      <img src="/static/mine.jpg">
+    </div> -->
+   <center>
+     <br>
+    <br>
+    <div class="company-info">
+      <span>PHOTOS <span class="our">FOR EVERYONE</span></span>
+      <p style="margin: 15px;">
+        <b>Pico</b> is a India-based website dedicated for sharing stock photography under the Pico license. Pico allows
+        photographers to upload photos to its website, which are then curated by a team of photo editors. In Pico we are
+        aspiring to be one of the largest photography suppliers on the internet.
+      </p>
+    </div>
+    </center><br><br>
+    <br>
+  </div>
+ 
+  <div class="team"><span>OUR TEAM</span></div>
+  <div class="container-about">
+    <div class="card-about">
+      <div class="card-image loading"><img src="/static/mine.jpg" alt="SAMPRIT" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Samprit <span class="yellow-surname">Ghosh</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Graphic Designing Head</span> <br>
+            Pursuing ECE Engineering (Techno International Newtown) <br>
+            Email: <a href="mailto:'yashfalke77@gmail.com'">sampritghosh310@gmail.com</a>
+          </span>
+        </p>
+        <div class="card-mediaIcons">
+          <a href="https://www.facebook.com/samprit.ghosh.396" class="loading" target="on_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/legend_samprit/" class="loading" target="on_blank"><i  class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="card-about">
+      <div class="card-image loading"><img src="https://media.istockphoto.com/photos/portrait-of-handsome-latino-african-man-picture-id1007763808?k=20&m=1007763808&s=612x612&w=0&h=q4qlV-99EK1VHePL1-Xon4gpdpK7kz3631XK4Hgr1ls=" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Harsh <span class="yellow-surname">Sunwani</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Web Developing Head</span> <br>
+            Pursuing IT Engineering (VIT Mumbai) <br>
+            Email: <a href="mailto:'harshsunwani11@gmail.com'">harshsunwani11@gmail.com</a>
+          </span>
+        </p>
+        <div class="card-mediaIcons">
+          <a href="#" class="loading" target="on_blank"><i class="fab fa-facebook-f"></i></a>
+          
+          <a href="https://www.instagram.com/harshsunwani/" class="loading" target="on_blank"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <!-- \\\\\\\\\\\\\\\\\\\\  -->
+
+
+    <div class="card-about">
+      <div class="card-image loading"><img src="https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Yash <span class="yellow-surname">Falke</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Graphic Designing Head</span> <br>
+            Pursuing IT Engineering (VIT Mumbai) <br>
+            Email: <a href="mailto:'yashfalke77@gmail.com'">yashfalke77@gmail.com</a>
+          </span>
+        </p>
+        <div class="card-mediaIcons">
+          <a href="#" class="loading" target="on_blank"><i class="fab fa-facebook-f"></i></a>
+         
+          <a href="https://www.instagram.com/yashfalke77/" class="loading" target="on_blank"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+    <!-- \\\\\\\\\\\\\\\\\\\\ -->
+
+
+    <div class="card-about">
+      <div class="card-image loading"><img src="https://images.pexels.com/photos/39866/entrepreneur-startup-start-up-man-39866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Yash <span class="yellow-surname">Falke</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Graphic Designing Head</span> <br>
+            Pursuing IT Engineering (VIT Mumbai) <br>
+            Email: <a href="mailto:'yashfalke77@gmail.com'">yashfalke77@gmail.com</a>
+          </span>
+        </p>
+        <div class="card-mediaIcons">
+          <a href="#" class="loading" target="on_blank"><i class="fab fa-facebook-f"></i></a>
+         
+          <a href="https://www.instagram.com/yashfalke77/" class="loading" target="on_blank"><i
+              class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+    <div class="card-about">
+      <div class="card-image loading"><img src="https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" /></div>
+      <div class="card-info">
+        <h3 class="card-title loading"><span>Nikhil <span class="yellow-surname">Jaiswal</span></span></h3>
+        <p class="card-description loading">
+          <span class="personal-info">
+            <span class="info">Marketing and Publicity Head</span> <br>
+            Pursuing IT Engineering (VIT Mumbai) <br>
+            Email: <a href="mailto:'nikjaiswal21@gmail.com'">nikjaiswal21@gmail.com</a>
+          </span>
+        </p>
+        <div class="card-mediaIcons">
+          <a href="#" class="loading" target="on_blank"><i class="fab fa-facebook-f"></i></a>
+         
+          <a href="#" class="loading" target="on_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="page-wrapper">
+    <footer class="footer">
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col-1">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#"><i class="fa fa-volume-control-phone" style="font-size:16px;color:white"></i><b style="margin-left:10px;">9123353984</b></a></li>
+              <li><a href="#"> <i class="fa-solid fa-house" style="font-size:16px;color:white"></i><b style="margin-left:10px;">A/3 Jayasrre Park Lane</b></a></li>
+              <li><a href="#"><i class="fa-solid fa-envelope" style="font-size:16px;color:white"></i><b style="margin-left:10px;">sampritghosh310@gmail.com</b></a></li>
+              <li><a href="#"><i class="fa-solid fa-location-dot" style="font-size:16px;color:white"></i><b style="margin-left:10px;">9123353984</b></a></li>
+        
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="/about">about us</a></li>
+              <li><a href="#">our services</a></li>
+              <li><a href="#">privacy policy</a></li>
+              <li><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="#">watch</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a class="social-fb" href="https://www.facebook.com/samprit.ghosh.396"><i class="fa-brands fa-facebook-f"></i></a>
+              <a class="social-tw" href="#"><i class="fab fa-twitter"style="color:sky-blue;font-size:13px;"></i></a>
+              <a class="social-insta" href="https://www.instagram.com/legend_samprit/"><i class="fab fa-instagram"></i></a>
+              <a class="social-linkd" href="https://www.linkedin.com/in/samprit-ghosh-5a8a1119b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKLZmEjttQi2YIytnwnyCog%3D%3D"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    
+    </footer>
+    <div id="footer-copyright-info">
+      &copy; SAMPRIT GHOSH Inc. 2022. All rights reserved.
+    </div>
+    </div>
+
+
+
+  
+</body>
+
+<script>
+  const cardImages = document.querySelectorAll(".card-image");
+const cardTitles = document.querySelectorAll(".card-title");
+const cardDescriptions = document.querySelectorAll(".card-description");
+const cardMediaIcons = document.querySelectorAll(".card-mediaIcons a");
+const cardImgs = document.querySelectorAll(".card-image img");
+const cardTitleSpans = document.querySelectorAll(".card-title span");
+const cardDescSpans = document.querySelectorAll(".card-description span");
+const mediaIcons = document.querySelectorAll(".card-mediaIcons a i");
+
+const renderCard = () => {
+  //Remove the skeleton loading effect
+  cardImages.forEach((cardImage) => {
+    cardImage.classList.remove("loading");
+  });
+  cardTitles.forEach((cardTitle) => {
+    cardTitle.classList.remove("loading");
+  });
+  cardDescriptions.forEach((cardDescription) => {
+    cardDescription.classList.remove("loading");
+  });
+  cardMediaIcons.forEach((cardMediaIcon) => {
+    cardMediaIcon.classList.remove("loading");
+  });
+
+  //Show the hidden html elements
+  cardImgs.forEach((cardImg) => {
+    cardImg.style.visibility = "visible";
+  });
+  cardTitleSpans.forEach((cardTitleSpan) => {
+    cardTitleSpan.style.visibility = "visible";
+  });
+  cardDescSpans.forEach((cardDescSpan) => {
+    cardDescSpan.style.visibility = "visible";
+  });
+  mediaIcons.forEach((mediaIcon) => {
+    mediaIcon.style.visibility = "visible";
+  });
+}
+
+//Execute renderCard on setTimeout
+setTimeout(() => {
+  renderCard();
+}, 1000);
+
+//Execute renderCard after the page loaded
+//window.addEventListener("load", () => {
+  //renderCard();
+//});
+
+</script>
+
+
+</html>

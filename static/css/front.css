@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+.navbar{
+  height:55px;
+}
+
+
+  .section-one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://wallpapercave.com/dwp2x/wp4316561.jpg);
+  
+    background-position: center;
+    filter: brightness();
+    height: 110vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .container {
+    text-align: center;
+    color: white;
+  }
+  
+  .h1-up {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 4rem;
+    font-weight: 400;
+    text-shadow:2px 2px  black;
+  }
+  
+  .p-up {
+    font-size: 1.15rem;
+    letter-spacing: 3px;
+    margin: 20px 0 40px;
+    text-shadow:1px 2px  black;
+  }
+  .l1{
+    display: none;
+    margin-bottom: 60px;
+  }
+  
+
+
+
+  .home-html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    overflow-x: hidden;
+  }
+  
+  .home-html::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  
+  .home-html::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  .home-html::-webkit-scrollbar-thumb {
+    background: #f00;
+  }
+  
+
+
+  .home-button {
+    color: white;
+    background-color: grey;
+    text-decoration: none;
+    border: 2px white solid;
+    padding: 10px 15px;
+    border-radius: 10px;
+  }
+  
+  .home-button:hover,
+  .home-button:focus {
+    background: rgb(18, 123, 18);
+    text-decoration: none;
+    color: beige;
+    outline: none;
+  }
+  
+  .section-two {
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .container-two {
+    display: flex;
+    padding: 50px;
+    gap: 25px;
+    width: 100%;
+  }
+  
+  .content h1 {
+    font-size: 2.75rem;
+  }
+  
+  .content h1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: #D1A370; 
+  }
+  
+  .content p {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+  
+  .content-image img {
+    margin-top:55px;
+    width: 300px;
+    object-fit: scale-down;
+  }
+  
+  @media (max-width: 860px) {
+    .section-two {
+      height: 100%;
+    }
+    .container-two {
+      flex-direction: column;
+      
+      height: 100%;
+    }
+    .content-image img {
+    
+       display: none;
+       
+      }
+
+      .l1{
+display: block;
+
+      }
+
+    }
+@media(max-width:375px){
+    .l1{
+        width:250px ;
+    }
+}
+
+@media(max-width:325px){
+    .l1{
+        width:200px ;
+    }
+    body{
+        zoom: 90%;
+    }
+}
+
+@media(max-width:290px){
+    .l1{
+        width:200px ;
+    }
+    body{
+        zoom: 85%;
+    }
+}
+
+@media(max-width:990px){
+
+.navbar{
+  height: fit-content;
+}
+
+.login{
+  width: 100%;
+  margin-top: 10px;
+}
+
+} 
+  
+  

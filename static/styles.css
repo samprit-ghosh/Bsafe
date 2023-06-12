@@ -1,0 +1,22 @@
+
+.home-html {
+
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+    overflow-x: hidden;
+  }
+  
+  .home-html::-webkit-scrollbar {
+    width: 0.6rem;
+  }
+  
+  .home-html::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  .home-html::-webkit-scrollbar-thumb {
+    background: #f00;
+  }
+  
+  
+  

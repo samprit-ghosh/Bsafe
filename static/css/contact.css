@@ -1,0 +1,343 @@
+:root {
+    --primary-color: #010712;
+    --secondary-color: #818386;
+    --bg-color: #FCFDFD;
+    --button-color: #3B3636;
+    --h1-color: #3F444C;
+  }
+  
+  [data-theme="dark"] {
+    --primary-color: #FCFDFD;
+    --secondary-color: #818386;
+    --bg-color: #010712;
+    --button-color: #818386;
+    --h1-color: #FCFDFD;
+  }
+  
+
+  
+  .contact-container {
+    display: flex;
+    height: 120vh;
+    background: var(--bg-color);
+  }
+  
+  .left-col {
+    width: 45vw;
+    height: 100%;
+    background-image: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+
+  
+  .right-col {
+    background: var(--bg-color);
+    width: 50vw;
+    height: 100vh;
+    padding: 5rem 3.5rem;
+  }
+  
+  h1, label, button, .description {
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+  }
+  
+  h1 {
+    color:var(--h1-color);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+  }
+  
+  p {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.01rem;
+    width: 40vw;
+    margin: 0.25rem 0;
+  }
+  
+  label, .description {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 0.625rem;
+  }
+  
+  form {
+
+    position: relative;
+    margin-top: 2rem;
+    padding: 1rem 0;
+  }
+  
+  input, textarea, label {
+    width: 40vw;
+    display: block;
+  }
+  
+  p, placeholder, input, textarea {
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: var(--primary-color);
+  }
+  
+  input, textarea {
+    color: var(--primary-color);
+    font-weight: 500;
+    background: var(--bg-color);
+    border: none;
+    border-bottom: 1px solid var(--secondary-color);
+    padding: 0.5rem 0;
+    margin-bottom: 2rem;
+    outline: none;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  .button-send {
+    text-transform: uppercase;
+    font-weight: 300;
+    background: var(--button-color);
+    color: var(--bg-color);
+padding: 10px 15px 10px 15px;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    /* margin:0; */
+    margin-bottom: 30px;
+    background-color: green;
+    border-radius: 10px;
+  }
+  
+  input:hover, textarea:hover {
+    opacity: 0.5;
+
+  }
+
+  @media(max-width:990px){
+
+    .navbar{
+      height: fit-content;
+    }
+    
+    .logout{
+      width: 100%;
+      margin-top: 10px;
+    }
+    
+    } 
+  
+
+  .button-send:hover{
+    background-color: rgb(152, 8, 8);
+  }
+  /* Toggle Switch */
+  
+  .theme {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 160px;
+    position: absolute;
+    top: 0.5rem;
+    right: 0;
+  }
+  
+  .description {
+      margin-left: 1.25rem;
+    }
+  
+  .theme-down {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+  }
+  
+ 
+
+.home-html {
+
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
+  overflow-x: hidden;
+}
+
+.home-html::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+.home-html::-webkit-scrollbar-track {
+  background: #000;
+}
+
+.home-html::-webkit-scrollbar-thumb {
+  background: #f00;
+}
+
+
+
+  
+
+
+  
+ 
+
+@media(max-width:1000px){
+.contact-container {
+display: flex;
+height: 140vh;
+background: var(--bg-color);
+}
+
+@media(max-width:654px){
+
+.contact-container {
+  display: flex;
+
+  flex-direction: column;
+  height: fit-content;
+  background: var(--bg-color);
+}
+.left-col {
+  width: 100%;
+  height: 40vw;
+  background-image: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.right-col {
+  background: var(--bg-color);
+  width: 100%;
+  height: 140vh;
+  padding: 5rem 3.5rem;
+}
+
+input, textarea, label {
+  width: 100%;
+  display: block;
+}
+}
+
+@media(max-width:525px){
+  .right-col {
+    background: var(--bg-color);
+    width: 100%;
+    height: 145vh;
+    padding: 5rem 3.5rem;
+  }
+}
+
+
+  @media(max-width:449px){
+    .right-col {
+      background: var(--bg-color);
+      width: 100%;
+      height: 150vh;
+      padding: 5rem 3.5rem;
+    }
+    h1 {
+      color:var(--h1-color);
+      text-transform: uppercase;
+      font-size: 2.1rem;
+      letter-spacing: 0.5rem;
+      font-weight: 300;
+    }
+  }
+
+  @media(max-width:409px){
+    .right-col {
+      background: var(--bg-color);
+      width: 100%;
+      height: 155vh;
+      padding: 5rem 3.5rem;
+    }
+    h1 {
+      color:var(--h1-color);
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      letter-spacing: 0.5rem;
+      font-weight: 300;
+    }
+
+    #footer-copyright-info{
+      padding:10px;
+        color: whitesmoke;
+        font-size: 0.9rem;
+        text-align: center;
+        background-color: #292929;
+      
+      }
+  }
+
+    @media(max-width:376px){
+      .right-col {
+        background: var(--bg-color);
+        width: 100%;
+        height: 155vh;
+        padding: 5rem 3.5rem;
+      }
+
+      h1 {
+        color:var(--h1-color);
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        letter-spacing: 0.5rem;
+        font-weight: 300;
+      }
+    }
+@media(max-width: 345px){
+  body{
+    zoom:90%;
+  }
+  .right-col {
+    background: var(--bg-color);
+    width: 100%;
+    /* height: 130vh; */
+    padding: 5rem 3.5rem;
+  }
+}
+@media(max-width: 315px){
+  .right-col {
+    background: var(--bg-color);
+    width: 100%;
+    height: 160vh;
+    padding: 5rem 3.5rem;
+  }
+
+  h1 {
+    color:var(--h1-color);
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    letter-spacing: 0.5rem;
+    font-weight: 300;
+  }
+  body{
+    zoom:87%;
+  }
+
+
+  @media(max-width:290px){
+    h1 {
+      color:var(--h1-color);
+      text-transform: uppercase;
+      zoom:80%;
+      letter-spacing: 0.5rem;
+      font-weight: 300;
+
+
+    }
+  }
+}
+
+}

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" class="home-html">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bsafe-Login</title>
+        <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/bank-icon/blue-bank-icon-in-flat-style-with-the-building-facade-with-three--26.png">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/5b61822651.js" crossorigin="anonymous"></script>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+      <link rel="stylesheet" href=
+      "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+          <link rel="stylesheet" href=
+      "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              integrity=
+      "sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+              crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+  
+
+<script src="/path/to/cdn/jquery.slim.min.js"></script>
+<script src="/path/to/dist/jquery.disableautofill.min.js"></script>
+
+       <script>
+        jQuery(document).ready(function(){
+  jQuery(function() {
+        jQuery(this).bind("contextmenu", function(event) {
+            event.preventDefault();
+            alert('Right click disable in this site!!')
+        });
+    });
+})
+        </script>
+
+        
+    </head>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(48, 37, 82) ;z-index: 10;">
+        <a class="navbar-brand" href="/">Bsafe</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" href="/login">About</a>
+            <a class="nav-item nav-link" href="/login">Contact</a>
+          </div>
+        </div>
+    
+ 
+        </div>
+      </nav>
+    
+      
+    <style>
+      .glow{
+        flex-grow: unset;
+      }
+    </style>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+				
+
+
+
+<div id="particles-js"></div>
+<div class="login-box container">
+  <h2>Dashboard Access</h2>
+  
+  <form id="loginForm" autocomplete="off">
+  
+    <center><small><span id="error" style="color: rgb(203, 10, 10) ;font-size:15px; text-shadow:1px 0px rgb(79, 4, 4);margin-bottom:25px;"></span></small></center>
+    <br>
+
+    <div class="user-box">
+      <input  id="myText" type="text" name="" class="input" required="" autocomplete="off">
+      <label>Full Name</label>
+    </div>
+    <div class="user-box">
+      <input   id="email" type="text" class="input"  name="" required="" autocomplete="off">
+      <label>Username</label>
+    </div>
+
+  
+
+    <div class="user-box">  
+
+                 <i class="bi bi-eye-slash togglePassword" id="togglePassword"></i>  
+                 <input   id="password" type="password" class="input"  name="" required="" autocomplete="off">
+      <label>Password</label>
+    </div>
+  
+    <a class="forgot" href="#" onclick="forgotPass()">Forgot Password?</a>
+  
+    <center><button type="submit" class="btn btn-success" onclick="login()" style="margin-right:20px ; margin-top:20px;">Login</button>
+    <button onclick="signUp(),SendEmail(); return false;" class="btn btn-warning" style=" margin-top:20px;">Sign Up</button>
+    </center>
+    <br>
+
+  </form>
+  <script src="login.js"></script>
+  <script>
+
+
+// As A jQuery Plugin
+$('#email').disableAutoFill();
+  </script>
+
+</div>
+
+
+
+
+
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+function SendEmail(){
+  var favoritemovie = document.getElementById("myText").value;
+// sessionStorage.setItem("favoriteMovie", favoritemovie);
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "sampritghosh310@gmail.com",
+        Password : "86E28C5F2741FADC39660C7575E9BBFB9516",
+        To : document.getElementById('email').value,
+        From : "sampritghosh310@gmail.com",
+        Subject : "Bsafe => From Samprit Ghosh",
+        Body : "Hello " + favoritemovie + " Welcome to our website, You are successfully loged in!!!"
+        
+
+    })
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const togglePassword = document.querySelector("#togglePassword");
+  const password = document.querySelector("#password");
+
+  togglePassword.addEventListener("click", function () {
+      // toggle the type attribute
+      const type = password.getAttribute("type") === "password" ? "text" : "password";
+      password.setAttribute("type", type);
+      
+      // toggle the icon
+      this.classList.toggle("bi-eye");
+  });
+
+  // prevent form submit
+  const form = document.querySelector("form");
+  form.addEventListener('submit', function (e) {
+      e.preventDefault();
+  });
+</script>
+
+
+
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+    
+       
+        </div>
+
+    <script>
+        var firebaseConfig ={
+            apiKey: "AIzaSyBPC3eojJtW60Jj47wAp2gAlCdyLO76Hhk",
+          authDomain: "credit-235dd.firebaseapp.com",
+          projectId: "credit-235dd",
+          storageBucket: "credit-235dd.appspot.com",
+          messagingSenderId: "1068587415705",
+          appId: "1:1068587415705:web:1140d97921ad2f742c6008",
+          measurementId: "G-XQWWVH1R7Z"
+        }
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const auth = firebase.auth();
+    </script>
+
+    <script type="module">
+          
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit",(event)=>{
+           event.preventDefault()
+       })
+        
+       firebase.auth().onAuthStateChanged((user)=>{
+            if(user){
+                location.replace("/welcome")
+           }
+     })
+        
+        function login(){
+           const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+            firebase.auth().signInWithEmailAndPassword(email, password)
+            .catch((error)=>{
+               document.getElementById("error").innerHTML = error.message
+            })
+        // This goes in the first web page:
+// favoriteMovie is the sessionStorage variable name
+// Shrek is the variable string value
+var favoritemovie = document.getElementById("myText").value;
+sessionStorage.setItem("favoriteMovie", favoritemovie);
+// document.getElementsById("demo").innerHTML=name;
+        }
+
+  
+
+       function signUp(){
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+            .catch((error) => {
+                document.getElementById("error").innerHTML = error.message
+         });
+       }
+
+
+
+
+
+
+  	
+	function signOut(){
+		
+		auth.signOut();
+		alert("Are You Sure to Signed Out ? ");
+    location.replace("/")
+		
+	}
+	
+	
+
+
+
+
+
+        
+        function forgotPass(){
+            const email = document.getElementById("email").value
+            firebase.auth().sendPasswordResetEmail(email)
+            .then(() => {
+                alert("Reset link sent to your email id")
+            })
+            .catch((error) => {
+                document.getElementById("error").innerHTML = error.message
+            });
+        }
+    </script> 
+
+
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\logout\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+
+
+
+<br><br>
+    
+ <div class="page-wrapper" >
+    <footer class="footer" >
+      <div class="container-footer">
+        <div class="row-footer">
+          <div class="footer-col-1">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#"><i class="fa fa-volume-control-phone" style="font-size:16px;color:white"></i><b style="margin-left:10px;">9123353984</b></a></li>
+              <li><a href="#"> <i class="fa-solid fa-house" style="font-size:16px;color:white"></i><b style="margin-left:10px;">A/3 Jayasrre Park Lane</b></a></li>
+              <li><a href="#"><i class="fa-solid fa-envelope" style="font-size:16px;color:white"></i><b style="margin-left:10px;">sampritghosh310@gmail.com</b></a></li>
+              <li><a href="#"><i class="fa-solid fa-location-dot" style="font-size:16px;color:white"></i><b style="margin-left:10px;">9123353984</b></a></li>
+       
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>company</h4>
+            <ul>
+              <li><a href="/login">about us</a></li>
+              <li><a href="/login">our services</a></li>
+              <li><a href="/login">privacy policy</a></li>
+              <li><a href="/login">Contact Us</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>online shop</h4>
+            <ul>
+              <li><a href="/login">watch</a></li>
+              <li><a href="/login">bag</a></li>
+              <li><a href="/login">shoes</a></li>
+              <li><a href="/login">dress</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a class="social-fb" href="https://www.facebook.com/samprit.ghosh.396"><i class="fa-brands fa-facebook-f"></i></a>
+              <a class="social-tw" href="#"><i class="fab fa-twitter"style="color:sky-blue;font-size:13px;"></i></a>
+              <a class="social-insta" href="https://www.instagram.com/legend_samprit/"><i class="fab fa-instagram"></i></a>
+              <a class="social-linkd" href="https://www.linkedin.com/in/samprit-ghosh-5a8a1119b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BKLZmEjttQi2YIytnwnyCog%3D%3D"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    
+    </footer>
+    <div id="footer-copyright-info">
+      &copy; SAMPRIT GHOSH Inc. 2022. All rights reserved.
+    </div>
+    </div>  
+    </body>
+</html>
