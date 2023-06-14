@@ -15,7 +15,7 @@ def index():
 def login():
     return render_template("login.html")
 
-@app.route('/welcome',methods=["GET","POST"])
+@app.route('/welcome/Sam//88//-9794741477///welcome//_CW55HF8NVT*MTY4NjY3NDU0Mi4xLjEuMTY4NjY3NDU2MC4wLjAuMA//////welcome//Samprit',methods=["GET","POST"])
 def welcome():
     
       return render_template("welcome.html")
@@ -28,7 +28,7 @@ def contact():
 def about():
     return render_template("about.html")
 
-@app.route('/main')
+@app.route('/main//welcome/Sam//88//-9794741477///welcome//_CW55HF8NVT*MTY4NjY3NDU0Mi4xLjEuMTY4NjY3NDU2MC4wLjAuMA//////welcome//Samprit//Mainpage mainframe')
 def home():   
        return render_template("home.html")
 
