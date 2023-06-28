@@ -15,7 +15,7 @@ def index():
 def login():
     return render_template("login.html")
 
-@app.route('/welcome',methods=["GET","POST"])
+@app.route('/welcome//hgiegferfiuhifh/klhewfgeyidgewidghiuewdhiuewhdiuew/lkjhgfcvbhnjkmkjhgfdsghjkhgf',methods=["GET","POST"])
 def welcome():
     
       return render_template("welcome.html")
