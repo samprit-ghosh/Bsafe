@@ -14,9 +14,10 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(https://wallpapercave.com/dwp2x/wp4316561.jpg);
   
     background-position: center;
+    background-repeat: no-repeat;
     filter: brightness();
     height: 110vh;
-
+     
     display: flex;
     flex-direction: column;
     justify-content: center;
