@@ -59,7 +59,12 @@ jQuery(function() {
 })
 
     </script> 
-    
+       <script>
+        let tagArr = document.getElementsByTagName("input");
+        for (let i = 0; i < tagArr.length; i++) {
+          tagArr[i].autocomplete = 'off';
+        }
+      </script>
 
 </head>
 <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(48, 37, 82) ;z-index: 10;">
@@ -103,7 +108,7 @@ jQuery(function() {
                     <div class="user-box">
                     
                         <input type="text" class="form-control-reg input" name="username" spellcheck="true" required
-                           autocomplete="off">
+                        autocomplete="off">
                             <label>Username</label>
                           </div>
     
@@ -112,7 +117,7 @@ jQuery(function() {
                 <div class="user-box">
                   <!-- <i class="bi bi-eye-slash togglePassword" id="togglePassword"></i>   -->
                         <input type="password" id="password" class="" name="password" required
-                            maxlength="30" autocomplete="off"  name="password" aria-autocomplete="none" >
+                            maxlength="30"   name="password" aria-autocomplete="none"autocomplete="off" >
                    
                             <label>Password</label>
                           </div>
