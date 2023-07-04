@@ -5,7 +5,7 @@ import sqlite3
 from flask_session import Session
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
-.0
+
 
 app.config["SESSION_PARMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
