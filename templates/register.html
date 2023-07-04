@@ -1,0 +1,253 @@
+
+  
+
+
+
+
+ <!DOCTYPE html>
+<html lang="en" class="home-html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bsafe | Register</title>
+    <link rel="icon" type="image/x-icon" href="https://www.freeiconspng.com/thumbs/bank-icon/blue-bank-icon-in-flat-style-with-the-building-facade-with-three--26.png">
+    
+   
+   
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+ <!-- jQuery (required for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap 4 JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- 
+    <script>
+    jQuery(document).ready(function(){
+jQuery(function() {
+    jQuery(this).bind("contextmenu", function(event) {
+        event.preventDefault();
+        alert('Right click disable in this site!!')
+    });
+});
+})
+    </script>  -->
+
+
+
+
+
+
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/register.css')}}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='asset/gym3.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnSubmit").click(function () {
+                var password = $("#password").val();
+                var confirmPassword = $("#txtConfirmPassword").val();
+                if (password != confirmPassword) {
+                    alert("Passwords do not match.");
+                    return false;
+                }
+                return true;
+            });
+        });
+    </script>
+
+<style>
+.a-hover:hover{
+color: red;
+text-decoration: none;
+}
+
+</style>
+
+
+</head>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(48, 37, 82) ;z-index: 10;">
+  <a class="navbar-brand" href="/">Bsafe</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="/">About</a>
+      <a class="nav-item nav-link" href="/">Contact</a>
+    </div>
+  </div>
+
+
+  </div>
+</nav>
+
+<body style=" background-image: url('/static/wall2.jpg');
+background-repeat: no-repeat;
+
+background-position: center;
+background-size: 1500px 1500px;">
+<br>
+    <div class="pre-form-reg reg-margin reg-body">
+
+        <div class="outer-form log-shadow container">
+
+
+            <form class="reg-form" autocapitalize="none" autocomplete="off" method="POST" style="margin-bottom: 0;"
+                action="/register">
+
+
+                <h2 class="registration" style="padding-bottom: 0px; margin-top: 10px;">Registration Page</h2>
+                <hr style="background-color: rgb(255, 255, 255);">
+
+
+
+                <div class="alert" style="font-family: sans-serif; font-size: 20px; color: {{category}};">
+
+                <div class="form-group-reg">
+                    <label class="reg-lebel">Name</label>
+                    <div class="input-icons">
+                        <i class="bi bi-person icon"></i> <input type="text" class="form-control-reg" name="name"
+                            spellcheck="true" required placeholder="Enter your full name" autocomplete="off">
+                    </div>
+                </div>
+
+
+                <div class="form-group-reg">
+                    <label class="reg-lebel">Email</label>
+                    <div class="input-icons">
+                        <i class="bi-envelope-fill icon"></i> <input type="email" class="form-control-reg" name="mail" id="email"
+                            required maxlength="30" autocomplete="none" autofocus="off" placeholder="Enter your Email" oninput="termschanged(termsCheckBoX);">
+                    </div>
+                </div>
+                <div class="form-group-reg">
+                    <label class="reg-lebel">Username</label>
+                    <div class="input-icons">
+                        <i class="bi-person-circle icon"></i> <input type="email" class="form-control-reg"
+                            name="username" required maxlength="30" autocomplete="off"  oninput="terms_changed(this)"
+                            placeholder="Create your username">
+                    </div>
+                </div>
+
+                <div class="form-group-reg">
+
+                    <label class="reg-lebel">Password</label>
+                    <div class="input-icons">
+                        <i class="far fa-eye" id="togglePassword" style="cursor: pointer;"></i>
+                        <i class="bi bi-key icon-pass"></i>
+                        <input type="password" class="form-control-reg" name="password" maxlength="30"
+                            autocomplete="off" required id="password" placeholder="Enter Password">
+                    </div>
+                </div>
+
+                <div class="form-group-reg">
+                    <label class="reg-lebel" for="password">Confirm Password:</label>
+                    <div class="input-icons">
+                        <i class="bi bi-key icon"></i>
+                        <span> <input type="password" class="form-control-reg" name="con-password"
+                                id="txtConfirmPassword" maxlength="30" placeholder="Confirm Password">
+                        </span>
+                    </div>
+                </div>
+                <!-- <br>
+                <input type="checkbox" required> Agree the terms & conditions -->
+                <div class="form-group-button-reg">
+                    <br>
+                  <center>  <input type="submit" class="btn btn-success" style="margin-right: 30px;" id="btnSubmit" value="Register" onClick="validate(),SendEmail();" disabled></center>
+               
+                </form>
+            </div>
+        </div>
+        
+       <center> <a href="{{url_for('login')}}" class="reg-form a-hover" id="back-login" style="margin-right: 30px;">⟵login here</a></center>
+
+       <br><br>
+
+    
+       <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+       <script>
+       function SendEmail(){
+
+
+           Email.send({
+               Host : "smtp.elasticemail.com",
+               Username : "sampritghosh310@gmail.com",
+               Password : "86E28C5F2741FADC39660C7575E9BBFB9516",
+               To : document.getElementById('email').value,
+               From : "sampritghosh310@gmail.com",
+               Subject : "Bsafe => From Samprit Ghosh",
+               Body : "Hello " + " Welcome to our website, You are successfully loged in!!!"
+               
+       
+           })
+
+
+       </script>
+       
+       
+       
+       
+       <script>
+        function terms_changed(termsCheckBox){
+        //If the checkbox has been checked
+        if(termsCheckBox.checked){
+            //Set the disabled property to FALSE and enable the button.
+            document.getElementById("btnSubmit").disabled = true;
+        } else{
+            //Otherwise, disable the submit button.
+            document.getElementById("btnSubmit").disabled = false;
+        }
+    }
+    
+  </script>
+    <script>
+        function termschanged(termsCheckBoX){
+        //If the checkbox has been checked
+        if(termsCheckBoX.checked){
+            //Set the disabled property to FALSE and enable the button.
+            document.getElementById("email").disabled = true;
+        } else{
+            //Otherwise, disable the submit button.
+            document.getElementById("email").disabled = false;
+        }
+    }
+    </script>
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+
+
+   </div>
+
+  
+</body>
+
+
+
+</html>

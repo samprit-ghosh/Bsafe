@@ -33,20 +33,6 @@
 </script> 
 
 
-<script>
-  var favoritemovie = sessionStorage.getItem("favoriteMovie");
-    var name=favoritemovie;
-    document.getElementById("demo").innerHTML = " Welcome to our website "+ name+" !!";
-    console.log(name+" babuyy...");</script>
-
-
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
 
 
   
@@ -54,54 +40,6 @@
 <!-- \\\\\\\\\\\\\\\\\\\\\\\\\logout\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
 
 
-<!-- //////////////////////////////////////////////firebase////////////////////////////////////////////// -->
-<script>
-    var firebaseConfig ={
-        apiKey: "AIzaSyBPC3eojJtW60Jj47wAp2gAlCdyLO76Hhk",
-      authDomain: "credit-235dd.firebaseapp.com",
-      projectId: "credit-235dd",
-      storageBucket: "credit-235dd.appspot.com",
-      messagingSenderId: "1068587415705",
-      appId: "1:1068587415705:web:1140d97921ad2f742c6008",
-      measurementId: "G-XQWWVH1R7Z"
-    }
-    
-    // Initialize Firebase
-     firebase.initializeApp(firebaseConfig);
-     firebase.analytics();
-     const auth = firebase.auth();
-
-	
-     function signOut(){
-		
-      auth.signOut();
-      location.replace("/")
-      
-    }
-    
-    
-    
-    auth.onAuthStateChanged(function(user){
-      
-      if(user){
-        
-        var email = user.email;
-       
-        
-      
-        
-      }else{
-        
-
-        //no user is signed in
-      }
-      
-      
-      
-    });
-  
-
-</script>
 <style>
   .glow{
     flex-grow: unset;
@@ -291,7 +229,7 @@ a:hover {
     <div class="navbar-nav">
 
       
-      <button type="button" class="btn btn-outline-warning" onclick="signOut()">Log Out</button></a>
+      <button type="button" class="btn btn-outline-warning">Log Out</button></a>
     </div>
   </div>
 </nav>
