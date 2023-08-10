@@ -32,6 +32,12 @@ def index():
 def home():
     return render_template("front.html")
 
+
+@app.route('/error-page')
+def error():
+    return render_template("error-page.html")  
+
+
 @app.route('/login',methods=["GET","POST"])
 def login():
     if request.method=='POST':
@@ -76,7 +82,7 @@ def register():
 @app.route('/dashboard',methods=["GET","POST"])
 def dashboard():
     if not session.get("username"):
-        return redirect("/login")
+        return redirect("/error-page")
     return render_template("dashboard.html")
 
 
@@ -84,19 +90,19 @@ def dashboard():
 def contact():
 
     if not session.get("username"):
-        return redirect("/login")
+        return redirect("/error-page")
     return render_template("contact.html")
 
 @app.route('/about',methods=["GET","POST"])
 def about():
         if not session.get("username"):
-           return redirect("/login")
+           return redirect("/error-page")
         return render_template("about.html")
 
 @app.route('/main')
 def main():   
         if not session.get("username"):
-           return redirect("/login")
+           return redirect("/error-page")
         return render_template("home.html")
 
 
