@@ -72,15 +72,15 @@
   
 
 
+
   .home-button {
     color: white;
-    background-color: grey;
+    background-color: rgb(197, 187, 4);
     text-decoration: none;
     border: 2px white solid;
     padding: 10px 15px;
     border-radius: 10px;
   }
-  
   .home-button:hover,
   .home-button:focus {
     background: rgb(18, 123, 18);
